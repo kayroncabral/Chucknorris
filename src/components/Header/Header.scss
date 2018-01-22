@@ -1,0 +1,29 @@
+@import '../../styles/styles.scss';
+
+.Header {
+  height: 70px;
+  background: $dark-blue;
+  display: flex;
+
+  > a {
+    padding: 0 1rem;
+    color: white;
+    text-decoration: none;
+  }
+}
+
+.headerContent {
+  width: 100%;
+  padding: $s-size;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navigation {
+  display: none;
+  @media (min-width: $tablet-breakpoint) {
+    display: flex;
+    align-items: center;
+  }
+}

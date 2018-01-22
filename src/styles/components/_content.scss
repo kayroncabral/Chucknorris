@@ -1,0 +1,12 @@
+.content {
+  margin: 0 auto;
+  padding: 0 $m-size;
+  max-width: 100rem;
+}
+
+.truncate {
+  width: 130px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

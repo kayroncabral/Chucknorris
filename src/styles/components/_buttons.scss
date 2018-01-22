@@ -1,0 +1,73 @@
+.button {
+  display: inline-block;
+  background: $blue;
+  color: white;
+  font-weight: 300;
+  line-height: 1;
+  padding: $s-size;
+  text-decoration: none;
+
+  &:hover {
+    background: darken($blue, 2%);
+  }
+
+  &:focus {
+    background: darken($blue, 5%);
+  }
+
+  &:disabled {
+    opacity: .5;
+  }
+}
+
+.largeButton {
+  @extend .button;
+  font-size: $l-size;
+  font-weight: bold;
+  padding: 2.4rem;
+}
+
+.buttonSecondary {
+  @extend .button;
+  background: $suva-grey;
+
+  &:hover {
+    background: darken($suva-grey, 2%);
+  }
+
+  &:focus {
+    background: darken($suva-grey, 5%);
+  }
+}
+
+.buttonLink {
+  background: none;
+  font-weight: 500;
+  padding: 0;
+
+  &:disabled {
+    opacity: .5;
+  }
+}
+
+.buttonIcon {
+  padding: 0;
+  border: 1px;
+  background: none;
+
+  &:hover {
+    svg path {
+      fill: black;
+    }
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:disabled {
+    svg path {
+      fill: $suva-grey;
+    }
+  }
+}
