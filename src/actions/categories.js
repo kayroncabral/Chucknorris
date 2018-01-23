@@ -16,7 +16,7 @@ export const getCategoriesRequest = () => ({
 
 export const getCategoriesFailure = (error) => ({
   type: 'GET_CATEGORIES_FAILURE',
-  error
+  error: error.message || 'Something went wrong.'
 })
 
 export const getCategoriesSuccess = () => ({
@@ -34,11 +34,11 @@ export const startGetCategories = () => {
         'Content-Type': 'application/json'
       }
     }).then(response => {
-       if (response.statusText === '') {
+       if (response.status >= 200 && response.status < 300) {
          dispatch(getCategoriesSuccess())
          return response.data
        }
-       throw Error(response.statusText)
+       throw Error('Something went wrong.')
      }).then(order => {
        dispatch(getCategories(order))
      }).catch(error => {

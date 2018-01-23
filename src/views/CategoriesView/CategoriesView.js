@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import { history } from '../../routers/AppRouter'
 import styles from './CategoriesView.scss'
 import { startGetCategories } from '../../actions/categories'
 import CategoryList from '../../components/CategoryList'
@@ -9,8 +10,8 @@ class CategoriesView extends Component {
     this.props.startGetCategories()
   }
 
-  onCategoryClick = e => {
-    console.log('Category clicked')
+  onCategoryClick = (e, category) => {
+    history.push(`/joke/${category}`)
   }
 
   render() {

@@ -4,7 +4,7 @@ import styles from './CategoryListItem.scss'
 
 const CategoryListItem = ({ title, onItemClick }) => {
   const onClick = e => {
-    onItemClick(e)
+    onItemClick(e, title)
   }
 
   return (

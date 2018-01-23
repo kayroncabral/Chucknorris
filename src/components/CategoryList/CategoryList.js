@@ -4,8 +4,8 @@ import styles from './CategoryList.scss'
 import CategoryListItem from '../CategoryListItem'
 
 const CategoryList = ({ categories, onCategoryClick }) => {
-  const onItemClick = e => {
-    onCategoryClick(e)
+  const onItemClick = (e, category) => {
+    onCategoryClick(e, category)
   }
 
   const renderCategory = (category, index) => {

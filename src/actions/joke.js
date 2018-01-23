@@ -5,6 +5,10 @@ import config from '../config'
   GET RANDOM JOKE BY CATEGORY
 */
 
+export const clearJoke = () => ({
+  type: 'CLEAR_JOKE'
+})
+
 export const getRandomJokeByCategory = joke => ({
   type: 'GET_RANDOM_JOKE_BY_CATEGORY',
   joke
@@ -16,14 +20,14 @@ export const getRandomJokeByCategoryRequest = () => ({
 
 export const getRandomJokeByCategoryFailure = error => ({
   type: 'GET_RANDOM_JOKE_BY_CATEGORY_FAILURE',
-  error
+  error: error.message || 'Something went wrong.'
 })
 
 export const getRandomJokeByCategorySuccess = () => ({
   type: 'GET_RANDOM_JOKE_BY_CATEGORY_SUCCESS'
 })
 
-export const startGetRandomJokeByCategory = category => {
+export const startGetRandomJokeByCategory = (category = '') => {
   return (dispatch) => {
     dispatch(getRandomJokeByCategoryRequest())
 
@@ -34,11 +38,11 @@ export const startGetRandomJokeByCategory = category => {
         'Content-Type': 'application/json'
       }
     }).then(response => {
-       if (response.statusText === '') {
+       if (response.status >= 200 && response.status < 300) {
          dispatch(getRandomJokeByCategorySuccess())
          return response.data
        }
-       throw Error(response.statusText)
+       throw Error('Something went wrong.')
      }).then(joke => {
        dispatch(getRandomJokeByCategory(joke))
      }).catch(error => {
