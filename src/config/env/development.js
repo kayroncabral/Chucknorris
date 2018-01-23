@@ -1,3 +1,3 @@
 module.exports = {
-  API: 'http://localhost:3000/api'
+  API: 'https://api.chucknorris.io'
 }
