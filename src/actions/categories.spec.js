@@ -6,7 +6,7 @@ import {
 } from './categories'
 import { categories } from '../seeds/categories'
 
-test('Should setup set orders action object', () => {
+test('Should setup categories action object', () => {
   const action = getCategories(categories)
   expect(action).toEqual({
     type: 'GET_CATEGORIES',
@@ -16,12 +16,12 @@ test('Should setup set orders action object', () => {
   })
 })
 
-test('Should generate action object for order request', () => {
+test('Should generate action object for category request', () => {
   const action = getCategoriesRequest()
   expect(action).toEqual({ type: 'GET_CATEGORIES_REQUEST' })
 })
 
-test('Should generate action object for order request failure', () => {
+test('Should generate action object for cateogory request failure', () => {
   const error = Error({ 'message': 'Whoops, looks like something went wrong.' })
   const action = getCategoriesFailure(error)
   expect(action).toEqual({
@@ -30,7 +30,7 @@ test('Should generate action object for order request failure', () => {
   })
 })
 
-test('Should generate action object for order request success', () => {
+test('Should generate action object for category request success', () => {
   const action = getCategoriesSuccess()
   expect(action).toEqual({ type: 'GET_CATEGORIES_SUCCESS' })
 })
