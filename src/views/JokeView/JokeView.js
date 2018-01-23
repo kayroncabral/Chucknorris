@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import styles from './JokeView.scss'
 import { startGetRandomJokeByCategory, clearJoke } from '../../actions/joke'
+import Loading from '../../components/Loading'
 
 class JokeView extends Component {
   componentDidMount() {
@@ -16,11 +17,20 @@ class JokeView extends Component {
 
   render() {
     const { joke } = this.props
+
     return (
       <div className={styles.CategoriesView}>
         <div className={styles.content}>
-          <img src={joke.icon_url} alt='chuck norris'></img>
-          <p>{joke.value}</p>
+          {
+            (!joke.value && joke.error === null) && <Loading/>
+          }
+          {
+            joke.value && 
+            <div>
+              <img src={joke.icon_url} alt='chuck norris'></img>
+              <p>{joke.value}</p>
+            </div>
+          }
         </div>
       </div>
     )

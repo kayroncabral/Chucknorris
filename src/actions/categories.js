@@ -39,8 +39,8 @@ export const startGetCategories = () => {
          return response.data
        }
        throw Error('Something went wrong.')
-     }).then(order => {
-       dispatch(getCategories(order))
+     }).then(categories => {
+       dispatch(getCategories(categories))
      }).catch(error => {
        dispatch(getCategoriesFailure(error))
      })

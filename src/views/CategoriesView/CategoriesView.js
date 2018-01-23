@@ -4,6 +4,7 @@ import { history } from '../../routers/AppRouter'
 import styles from './CategoriesView.scss'
 import { startGetCategories } from '../../actions/categories'
 import CategoryList from '../../components/CategoryList'
+import Loading from '../../components/Loading'
 
 class CategoriesView extends Component {
   componentDidMount() {
@@ -15,13 +16,16 @@ class CategoriesView extends Component {
   }
 
   render() {
-    const { categories } = this.props
+    const { category } = this.props
 
     return (
       <div className={styles.CategoriesView}>
         <div className={styles.content}>
+          {
+            (category.categories.length === 0 && category.error === null) && <Loading/>
+          }
           <CategoryList
-            categories={categories}
+            categories={category.categories}
             onCategoryClick={this.onCategoryClick}
           />
         </div>
@@ -32,7 +36,7 @@ class CategoriesView extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    categories: state.categories
+    category: state.category
   }
 }
 

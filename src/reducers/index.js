@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux'
 
-import categories from './categories'
+import category from './category'
 import joke from './joke'
 import user from './user'
 
-export default combineReducers({ user, joke, categories })
+export default combineReducers({ user, joke, category })
