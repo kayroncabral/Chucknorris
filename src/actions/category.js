@@ -38,7 +38,7 @@ export const startGetCategories = () => {
          dispatch(getCategoriesSuccess())
          return response.data
        }
-       throw Error('Something went wrong.')
+       throw new Error('Something went wrong.')
      }).then(categories => {
        dispatch(getCategories(categories))
      }).catch(error => {

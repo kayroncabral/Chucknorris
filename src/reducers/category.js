@@ -17,7 +17,8 @@ export default (state = defaultState, action) => {
       }
     case 'GET_RANDOM_JOKE_BY_CATEGORY_FAILURE':
       return {
-        error: action.error
+        error: action.error,
+        categories: []
       }
     default:
       return state

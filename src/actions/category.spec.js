@@ -3,7 +3,7 @@ import {
   getCategoriesRequest,
   getCategoriesFailure,
   getCategoriesSuccess
-} from './categories'
+} from './category'
 import { categories } from '../seeds/categories'
 
 test('Should setup categories action object', () => {
@@ -24,9 +24,10 @@ test('Should generate action object for category request', () => {
 test('Should generate action object for cateogory request failure', () => {
   const error = Error({ 'message': 'Whoops, looks like something went wrong.' })
   const action = getCategoriesFailure(error)
+
   expect(action).toEqual({
     type: 'GET_CATEGORIES_FAILURE',
-    error
+    error: error.message
   })
 })
 

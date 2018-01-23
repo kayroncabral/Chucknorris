@@ -14,3 +14,14 @@ test('Should set joke', () => {
   const state = jokeReducer(joke, action)
   expect(state).toEqual({ ...joke })
 })
+
+test('Should set joke error', () => {
+  const error = new Error('Something went wrong.')
+  const action = {
+    type: 'GET_RANDOM_JOKE_BY_CATEGORY_FAILURE',
+    error: error.message
+  }
+  const state = jokeReducer(joke, action)
+
+  expect(state).toEqual({ error: error.message })
+})

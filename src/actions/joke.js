@@ -42,7 +42,7 @@ export const startGetRandomJokeByCategory = (category = '') => {
          dispatch(getRandomJokeByCategorySuccess())
          return response.data
        }
-       throw Error('Something went wrong.')
+       throw new Error('Something went wrong.')
      }).then(joke => {
        dispatch(getRandomJokeByCategory(joke))
      }).catch(error => {
