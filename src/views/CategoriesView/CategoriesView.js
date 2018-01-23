@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { history } from '../../routers/AppRouter'
 import styles from './CategoriesView.scss'
-import { startGetCategories } from '../../actions/categories'
+import { startGetCategories } from '../../actions/category'
 import CategoryList from '../../components/CategoryList'
 import Loading from '../../components/Loading'
 
