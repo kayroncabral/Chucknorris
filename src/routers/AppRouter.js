@@ -1,7 +1,6 @@
 import React from 'react'
 import { Router, Route, Switch } from 'react-router-dom'
 import createHistory from 'history/createBrowserHistory'
-import PublicRoute from './PublicRoute'
 import NotFound from '../components/NotFound'
 import CategoriesView from '../views/CategoriesView'
 import JokeView from '../views/JokeView'
@@ -12,8 +11,8 @@ const AppRouter = () => (
   <Router history={history}>
     <div>
       <Switch>
-        <PublicRoute exact path='/' component={CategoriesView}/>
-        <PublicRoute path='/joke' component={JokeView}/>
+        <Route exact path='/' component={CategoriesView}/>
+        <Route path='/joke' component={JokeView}/>
         <Route component={NotFound}/>
       </Switch>
     </div>
