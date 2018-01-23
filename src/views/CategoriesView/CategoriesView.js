@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import styles from './CategoriesView.scss'
-import { startGetCategories } from '../../actions/joke'
+import { startGetCategories } from '../../actions/categories'
 import CategoryList from '../../components/CategoryList'
 
 class CategoriesView extends Component {
@@ -14,7 +14,7 @@ class CategoriesView extends Component {
   }
 
   render() {
-    const { joke: { categories } } = this.props
+    const { categories } = this.props
 
     return (
       <div className={styles.CategoriesView}>
@@ -31,7 +31,7 @@ class CategoriesView extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    joke: state.joke
+    categories: state.categories
   }
 }
 

@@ -3,17 +3,14 @@
   2. Never change state or action
 */
 
-const defaultState = {
-  categories: []
-}
+const defaultState = []
 
 export default (state = defaultState, action) => {
   switch (action.type) {
     case 'GET_CATEGORIES':
-      return {
-        ...state,
-        categories: action.categories
-      }
+      return [
+        ...action.categories
+      ]
     default:
       return state
   }
