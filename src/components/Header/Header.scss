@@ -1,0 +1,14 @@
+@import '../../styles/styles.scss';
+
+.Header {
+  padding: $l-size;
+  display: flex;
+  align-items: center;
+  height: 70px;
+  background: white;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+}

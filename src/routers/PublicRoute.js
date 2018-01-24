@@ -1,5 +1,6 @@
 import React from 'react'
 import { Route } from 'react-router-dom'
+import Header from '../components/Header'
 import Footer from '../components/Footer'
 
 const PublicRoute = ({ isAuthenticated, component: Component, ...rest }) => (
@@ -7,6 +8,7 @@ const PublicRoute = ({ isAuthenticated, component: Component, ...rest }) => (
     {...rest}
     component={(props) => (
       <div>
+        <Header/>
         <Component {...props}/>
         <Footer/>
       </div>
