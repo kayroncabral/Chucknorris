@@ -3,5 +3,5 @@
 .CategoryList {
   min-width: 300px;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
 }

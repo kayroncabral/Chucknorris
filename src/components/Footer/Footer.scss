@@ -1,9 +1,9 @@
 @import '../../styles/styles.scss';
 
 .Footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
   background: white;
 }
 

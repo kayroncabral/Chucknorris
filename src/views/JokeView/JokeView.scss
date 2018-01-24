@@ -1,11 +1,12 @@
 @import '../../styles/styles.scss';
 
 .JokeView {
+  padding: $l-size;
+  padding-bottom: 150px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
 }
 
 .joke {
