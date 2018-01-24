@@ -30,7 +30,7 @@ class JokeView extends Component {
           (!joke.value && joke.error === null) && <Loading/>
         }
         {
-          joke.error && <p>Category not found :/</p>
+          joke.error && <h1>Category not found :/</h1>
         }
         <div className={styles.content}>
           {

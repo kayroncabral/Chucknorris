@@ -3,7 +3,7 @@ import styles from './NotFound.scss'
 
 const NotFound = () => (
   <div className={styles.NotFound}>
-    <h3>Not Found 404!</h3>
+    <h1>Page Not Found :/</h1>
   </div>
 )
 

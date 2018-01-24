@@ -1,5 +1,5 @@
 import React from 'react'
-import { Router, Route, Switch } from 'react-router-dom'
+import { Router, Switch } from 'react-router-dom'
 import createHistory from 'history/createBrowserHistory'
 import NotFound from '../components/NotFound'
 import CategoriesView from '../views/CategoriesView'
@@ -14,7 +14,7 @@ const AppRouter = () => (
       <Switch>
         <PublicRoute exact path='/' component={CategoriesView}/>
         <PublicRoute path='/joke' component={JokeView}/>
-        <Route component={NotFound}/>
+        <PublicRoute component={NotFound}/>
       </Switch>
     </div>
   </Router>

@@ -27,13 +27,10 @@ class CategoriesView extends Component {
           </div>
         }
         <div className={styles.content}>
-          {
-            category.categories.length !== 0 &&
-            <CategoryList
-              categories={category.categories}
-              onCategoryClick={this.onCategoryClick}
-            />
-          }
+          <CategoryList
+            categories={category.categories}
+            onCategoryClick={this.onCategoryClick}
+          />
         </div>
       </div>
     )
