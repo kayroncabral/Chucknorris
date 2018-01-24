@@ -20,14 +20,20 @@ class CategoriesView extends Component {
 
     return (
       <div className={styles.CategoriesView}>
+        {
+          (category.categories.length === 0 && category.error === null) &&
+          <div className={styles.center}>
+             <Loading/>
+          </div>
+        }
         <div className={styles.content}>
           {
-            (category.categories.length === 0 && category.error === null) && <Loading/>
+            category.categories.length !== 0 &&
+            <CategoryList
+              categories={category.categories}
+              onCategoryClick={this.onCategoryClick}
+            />
           }
-          <CategoryList
-            categories={category.categories}
-            onCategoryClick={this.onCategoryClick}
-          />
         </div>
       </div>
     )

@@ -1,7 +1,11 @@
 .content {
   margin: 0 auto;
-  padding: 0 $m-size;
-  max-width: 100rem;
+  padding: 0 $s-size;
+  max-width: 50rem;
+
+  @media (min-width: $desktop-breakpoint) {
+    padding: 0 $l-size;
+  }
 }
 
 .truncate {

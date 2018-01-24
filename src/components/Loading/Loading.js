@@ -1,11 +1,12 @@
 import React from 'react'
 import styles from './Loading.scss'
+import ReactLoading from 'react-loading'
 
 const Loading = () => {
   return (
-    <header className={styles.Loading}>
-      <p>Loading...</p>
-    </header>
+    <div className={styles.Loading}>
+      <ReactLoading type='cubes' color='#fff'/>
+    </div>
   )
 }
 

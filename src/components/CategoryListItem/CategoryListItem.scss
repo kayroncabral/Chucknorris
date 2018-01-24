@@ -1,0 +1,33 @@
+@import '../../styles/styles.scss';
+
+.CategoryListItem {
+  padding: $l-size;
+  display: flex;
+  align-items: center;
+  color: $quick-silver;
+  background: white;
+  transition: background 1.2s;
+  text-transform: capitalize;
+  border-bottom: 1px solid $gainsboro;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.14);
+
+  > p {
+    margin: 0;
+    font-size: $font-size-xlarge;
+    font-style: 200;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:nth-child(even) {
+    transform: perspective(100px) rotateX(3deg) translateY(2px) scale(1.001);
+    background: linear-gradient(to bottom,  #ffffff 0%,#EFEFEF 100%);
+  }
+
+  &:nth-child(odd) {
+    transform: perspective(100px) rotateX(-3deg) translateY(3px);
+    background: linear-gradient(to top,  #ffffff 0%,#EFEFEF 100%);
+  }
+}
