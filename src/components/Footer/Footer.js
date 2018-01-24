@@ -1,4 +1,4 @@
-  import React from 'react';
+import React from 'react';
 import styles from './Footer.scss'
 import LinkedInIcon from '../../styles/icons/linkedin-icon.svg'
 import GithubIcon from '../../styles/icons/github-icon.svg'
@@ -25,7 +25,7 @@ const Footer = () => {
   }
 
   return (
-    <div className={styles.Footer}>
+    <footer className={styles.Footer}>
       <div className={styles.content}>
         <div className={styles.socialShortcuts}>
           {
@@ -34,7 +34,7 @@ const Footer = () => {
         </div>
         <div className={styles.rightsReserved}><p>KAYRON CABRAL © 2018. ALL RIGHTS RESERVED.</p></div>
       </div>
-    </div>
+    </footer>
   )
 }
 
