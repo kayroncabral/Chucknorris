@@ -1,5 +1,5 @@
-import categoriesReducer from './category'
-import { categories } from '../seeds/categories'
+import categoriesReducer from '../../reducers/category'
+import { categories } from '../../seeds/categories'
 
 test('Should setup default categories values', () => {
   const state = categoriesReducer(undefined, { type: '@@INIT' })

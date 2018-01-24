@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render Header correctly 1`] = `
+<footer
+  className={undefined}
+>
+  <div
+    className={undefined}
+  >
+    <div
+      className={undefined}
+    >
+      <a
+        className={[Function]}
+        href="https://github.com/kayroncabral/Chucknorris"
+      >
+        <github-icon.svg />
+      </a>
+      <a
+        className={[Function]}
+        href="https://www.linkedin.com/in/kayroncabral/"
+      >
+        <linkedin-icon.svg />
+      </a>
+    </div>
+    <div
+      className={undefined}
+    >
+      <p>
+        KAYRON CABRAL © 2018. ALL RIGHTS RESERVED.
+      </p>
+    </div>
+  </div>
+</footer>
+`;

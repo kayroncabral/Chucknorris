@@ -3,8 +3,8 @@ import {
   getCategoriesRequest,
   getCategoriesFailure,
   getCategoriesSuccess
-} from './category'
-import { categories } from '../seeds/categories'
+} from '../../actions/category'
+import { categories } from '../../seeds/categories'
 
 test('Should setup categories action object', () => {
   const action = getCategories(categories)

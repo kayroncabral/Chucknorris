@@ -3,8 +3,8 @@ import {
   getRandomJokeByCategoryRequest,
   getRandomJokeByCategoryFailure,
   getRandomJokeByCategorySuccess
-} from './joke'
-import { joke } from '../seeds/joke'
+} from '../../actions/joke'
+import { joke } from '../../seeds/joke'
 
 test('Should setup joke action object', () => {
   const action = getRandomJokeByCategory(joke)

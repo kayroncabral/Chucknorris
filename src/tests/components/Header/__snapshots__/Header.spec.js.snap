@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render Header correctly 1`] = `
+<header
+  className={undefined}
+>
+  <div
+    className={undefined}
+  >
+    <Link
+      replace={false}
+      to="/"
+    >
+      Categories
+    </Link>
+  </div>
+</header>
+`;

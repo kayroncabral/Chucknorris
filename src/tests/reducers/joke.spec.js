@@ -1,5 +1,5 @@
-import jokeReducer from './joke'
-import { joke } from '../seeds/joke'
+import jokeReducer from '../../reducers/joke'
+import { joke } from '../../seeds/joke'
 
 test('Should setup default joke value', () => {
   const state = jokeReducer(undefined, { type: '@@INIT' })
