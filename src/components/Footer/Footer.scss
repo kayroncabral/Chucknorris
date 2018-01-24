@@ -1,0 +1,52 @@
+@import '../../styles/styles.scss';
+
+.Footer {
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  > .link {
+    margin: $m-size;
+
+    &:hover {
+      border-bottom: none;
+    }
+  }
+}
+
+.socialShortcuts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  > .link {
+    margin: $s-size;
+
+    &:hover {
+      border-bottom: none;
+    }
+  }
+}
+
+.rightsReserved {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 15px;
+
+  > p {
+    margin: 0;
+  	font-size: $s-size;
+  	line-height: 1.5;
+  	text-align: center;
+  	color: $quick-silver;
+  }
+}
