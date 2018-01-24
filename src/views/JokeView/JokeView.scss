@@ -7,6 +7,12 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  > p {
+    color: white;
+    font-size: $font-size-xlarge;
+    font-style: bold;
+  }
 }
 
 .joke {

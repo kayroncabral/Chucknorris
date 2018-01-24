@@ -29,6 +29,9 @@ class JokeView extends Component {
         {
           (!joke.value && joke.error === null) && <Loading/>
         }
+        {
+          joke.error && <p>Category not found :/</p>
+        }
         <div className={styles.content}>
           {
             joke.value &&
