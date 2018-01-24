@@ -21,10 +21,7 @@ class CategoriesView extends Component {
     return (
       <div className={styles.CategoriesView}>
         {
-          (category.categories.length === 0 && category.error === null) &&
-          <div className={styles.center}>
-             <Loading/>
-          </div>
+          (category.categories.length === 0 && category.error === null) && <Loading/>
         }
         <div className={styles.content}>
           <CategoryList

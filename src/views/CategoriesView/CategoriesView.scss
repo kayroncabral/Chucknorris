@@ -3,6 +3,10 @@
 .CategoriesView {
   padding: $s-size;
   padding-bottom: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .center {
