@@ -1,7 +1,7 @@
 {
   "name": "chucknorris",
   "description": "Client web for Chuck Norris facts from chucknorris.io API",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "repository": "github:kayroncavral/Chucknorris",
   "author": "Kayron Cabral",
   "license": "GPL-3.0",
